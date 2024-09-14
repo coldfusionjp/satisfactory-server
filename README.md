@@ -2,7 +2,7 @@
 
 This is a Dockerfile and Makefile build script to generate a Docker image for the dedicated [Satisfactory](https://store.steampowered.com/app/526870/Satisfactory/) game server.
 
-This Dockerfile is confirmed working with Satisfactory Update 8.
+This Dockerfile is confirmed working with the Satisfactory 1.0 Release (and previously supported Update 8 as well).
 
 ## Features
 
