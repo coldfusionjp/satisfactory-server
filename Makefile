@@ -10,7 +10,7 @@ all:
 
 run:
 	@mkdir -p ${SS_CONFIG} ${SS_SAVED}
-	docker run --platform linux/amd64 -p 7777:7777/udp -p 15000:15000/udp -p 15777:15777/udp -d --name satisfactory-server --mount type=bind,source=${SS_SAVED},target=/home/steam/.config/Epic/FactoryGame --mount type=bind,source=${SS_CONFIG},target=/home/steam/SatisfactoryDedicatedServer/FactoryGame/Saved/Config/LinuxServer -t satisfactory-server
+	docker run --platform linux/amd64 -p 7777:7777/tcp -p 7777:7777/udp -d --name satisfactory-server --mount type=bind,source=${SS_SAVED},target=/home/steam/.config/Epic/FactoryGame --mount type=bind,source=${SS_CONFIG},target=/home/steam/SatisfactoryDedicatedServer/FactoryGame/Saved/Config/LinuxServer -t satisfactory-server
 
 shell:
 	docker exec -it satisfactory-server /bin/bash
